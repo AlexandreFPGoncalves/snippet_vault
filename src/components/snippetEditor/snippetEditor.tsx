@@ -2,6 +2,7 @@ import { useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { languages } from "@codemirror/language-data";
+import { tokyoNightStorm } from "@uiw/codemirror-theme-tokyo-night-storm";
 
 export const SnippetEditor = ({
   onSave,
@@ -23,7 +24,7 @@ export const SnippetEditor = ({
             onChange={(e) => setTitle(e.currentTarget.value)}
           />
         </h2>
-        {/* <CodeMirror
+        <CodeMirror
           value={code}
           width="500px"
           height="30vh"
@@ -33,8 +34,9 @@ export const SnippetEditor = ({
             markdown({ base: markdownLanguage, codeLanguages: languages }),
           ]}
           onChange={(value) => setCode(value)}
-          className="border border-gray-300"
-        /> */}
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+          theme={tokyoNightStorm}
+        />
       </div>
       <div className="card-actions justify-end">
         <button
