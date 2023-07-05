@@ -1,5 +1,4 @@
 import { signIn, signOut, useSession } from "next-auth/react";
-import Image from "next/image";
 
 export const Header = () => {
   const { data: sessionData } = useSession();
@@ -28,7 +27,7 @@ export const Header = () => {
           ) : (
             <button
               className="btn-ghost rounded-btn btn"
-              onClick={() => void signIn()}
+              onClick={() => void signIn("github")}
             >
               Sign in
             </button>
