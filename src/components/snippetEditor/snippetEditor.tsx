@@ -23,7 +23,7 @@ export const SnippetEditor = ({
             onChange={(e) => setTitle(e.currentTarget.value)}
           />
         </h2>
-        <CodeMirror
+        {/* <CodeMirror
           value={code}
           width="500px"
           height="30vh"
@@ -34,7 +34,7 @@ export const SnippetEditor = ({
           ]}
           onChange={(value) => setCode(value)}
           className="border border-gray-300"
-        />
+        /> */}
       </div>
       <div className="card-actions justify-end">
         <button
