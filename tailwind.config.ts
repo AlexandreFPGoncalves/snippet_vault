@@ -2,8 +2,11 @@ import { type Config } from "tailwindcss";
 
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  daisyui: {
+    themes: ["dark", "night", "winter"],
+  },
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 } satisfies Config;
