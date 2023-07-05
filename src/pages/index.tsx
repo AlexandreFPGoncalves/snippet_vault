@@ -107,7 +107,7 @@ const Content: React.FC = () => {
           ))}
         </div>
 
-        <SnippetEditor
+        {/* <SnippetEditor
           onSave={({ title, content }) => {
             void createSnippet.mutate({
               title,
@@ -115,7 +115,7 @@ const Content: React.FC = () => {
               topicId: selectedTopic?.id ?? "",
             });
           }}
-        />
+        /> */}
       </div>
     </div>
   );
