@@ -11,7 +11,7 @@ export const SnippetCard = ({
   snippet: Snippet;
   onDelete: () => void;
 }) => {
-  const [isExpanded, setIsExpanded] = useState<boolean>(true);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   return (
     <div className="card mt-5 border border-gray-200 bg-base-100 shadow-xl">

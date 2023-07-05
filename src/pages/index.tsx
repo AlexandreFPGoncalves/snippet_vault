@@ -7,6 +7,8 @@ import { SnippetEditor } from "@/components/snippetEditor/snippetEditor";
 import { SnippetCard } from "@/components/snippetCard/snippetCard";
 
 export default function Home() {
+  const { data: sessionData } = useSession();
+
   return (
     <>
       <Head>
@@ -16,7 +18,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <Content />
+        {sessionData?.user && <Content />}
       </main>
     </>
   );
@@ -107,7 +109,7 @@ const Content: React.FC = () => {
           ))}
         </div>
 
-        {/* <SnippetEditor
+        <SnippetEditor
           onSave={({ title, content }) => {
             void createSnippet.mutate({
               title,
@@ -115,7 +117,7 @@ const Content: React.FC = () => {
               topicId: selectedTopic?.id ?? "",
             });
           }}
-        /> */}
+        />
       </div>
     </div>
   );
